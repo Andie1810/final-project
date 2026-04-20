@@ -43,9 +43,9 @@ let isSaved = false;
 function setVibe(vibe) {
   currentVibe = vibe;
   document.querySelectorAll('.vibe-btn').forEach(btn => {
-    btn.removeAttribute('data-active');
+    btn.classList.remove('active-vibe');
   });
-  document.getElementById('vibe-' + vibe).setAttribute('data-active', 'true'); // ✦ changed
+  document.getElementById('vibe-' + vibe).classList.add('active-vibe');
 }
 
 function pick(arr) {
@@ -55,11 +55,12 @@ function pick(arr) {
 function setCard(cardId, category, number) {
   const card = document.getElementById(cardId);
   if (number === null) {
-    card.innerHTML = `<span class="font-serif text-sm" style="color: #7a1f3d">no<br>outerwear</span>`;
+    card.innerHTML = `<span class="font-serif text-base text-center" style="color: #7a1f3d">no<br>outerwear</span>`;
   } else {
     card.innerHTML = `<img src="images/${category}${number}.png"
       alt="${category} ${number}"
-      class="w-full h-full object-contain" />`;
+      class="w-full h-full object-contain opacity-0 transition-opacity duration-300" 
+      onload="this.classList.add('opacity-100')" />`;
   }
 }
 
