@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Outfit Roulette</title>
     <link rel="stylesheet" href="screen.css">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600&family=Young+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..600&family=Young+Serif&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -25,38 +25,62 @@
         }
       }
   </script>
-
   </head>
-  <body class="bg-blush text-burgundy">
-    <div class="max-w-6xl mx-auto">
-      <header class="flex justify-between items-center w-full bg-blush py-4">
-        <div class="border border-burgundy px-6 py-1 rounded-full font-serif text-sm">
-          outfit roulette
-        </div>
-        <nav class="flex items-center gap-10 font-sans font-medium uppercase text-xs">
-          <a href="#" class="hover:underline underline-offset-4 decoration-2">Generator</a>
-          <a href="#" class="hover:underline underline-offset-4 decoration-2">Saved Outfits</a>
-          <img src="user.svg" class="w-7 h-7" />
-        </nav>
-      </header>
-    </div>
-      
-      <section class="py-20">
-        <div class="max-w-4xl mx-auto">
-          <h1 class="text-9xl font-serif text-center mb-12">
+  
+  <body class="bg-blush text-burgundy flex flex-col">
+    <header class="max-w-6xl mx-auto flex justify-between items-center w-full bg-blush py-4">
+      <div class="border border-burgundy px-6 py-1 rounded-full font-serif text-base">
+        <a href="index.html">outfit roulette</a>
+      </div>
+      <nav class="flex items-center gap-10 font-sans font-medium uppercase text-sm">
+        <a href="generator.html" class="hover:underline underline-offset-4 decoration-2">Generator</a>
+        <a href="saved.html" class="hover:underline underline-offset-4 decoration-2">Saved Outfits</a>
+        <img src="user.svg" alt="User" class="w-7 h-7" />
+      </nav>
+    </header>
+    
+    <main class="h-[calc(100vh-56px)] flex flex-col">
+      <section class="flex-1 flex items-center min-h-0">
+        <div class="mx-auto w-full px-6 py-12">
+          <h1 class="text-9xl font-serif text-center mb-10">
           outfit roulette
           </h1>
-          <div class="flex items-center justify-between gap-8">
-            <p class="max-w-[380px] font-sans text-base">
+          <div class="max-w-4xl mx-auto flex items-center justify-between gap-8">
+            <p class="max-w-[550px] font-sans text-xl">
               Mix and match clothes, explore different vibes and generate endless outfit combinations.
             </p>
-            <button class="border border-burgundy border-2 px-6 py-2 font-sans font-semibold text-base hover:bg-burgundy hover:text-blush transition">
+            <button class="border-2 border-burgundy px-6 py-2 font-sans font-semibold text-xl hover:bg-burgundy hover:text-blush transition">
               Generate an Outfit
             </button>
           </div>
         </div>
       </section>
+      <section class="flex-1 bg-smoke flex items-center min-h-0">
+        <div class="max-w-6xl mx-auto w-full h-full">
+          <img src="outfits.gif" class="w-full h-full object-contain"/>
+        </div>
+      </section>
+    </main>
+    
+    <section class="py-20 text-center">
+      <h2 class="text-4xl font-serif mb-6">how it works</h2>
+      <div class="font-sans text-xl">
+        <p>Choose a vibe or leave it up to chance</p>
+        <p>Generate and discover new outfit combos</p>
+        <p>Save your favourite looks and try again</p>
+      </div>
+    </section>
 
-      <section 
+    <footer class="border-t border-burgundy/30 w-full py-6 font-serif text-xs">
+      <div class="max-w-6xl mx-auto w-full flex justify-between items-center">
+        <p>Mix, match, and have fun</p>
+        <div class="flex gap-8 font-sans">
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
