@@ -3,17 +3,60 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Outfit Roulette</title>
     <link rel="stylesheet" href="screen.css">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600&family=Young+Serif&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              burgundy: "#7B0D1E",
+              cherry: "#9F2042",
+              blush: "#F8E5EE",
+              smoke: "#F5F5F5",
+            },
+            fontFamily: {
+              serif: ['Young Serif', 'serif'],
+              sans: ['Instrument Sans', 'sans-serif'],
+            }
+          }
+        }
+      }
+  </script>
+
   </head>
-  <body>
-    <h1>Home</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
-    <script src="index.js"></script>
+  <body class="bg-blush text-burgundy">
+    <div class="max-w-6xl mx-auto">
+      <header class="flex justify-between items-center w-full bg-blush py-4">
+        <div class="border border-burgundy px-6 py-1 rounded-full font-serif text-sm">
+          outfit roulette
+        </div>
+        <nav class="flex items-center gap-10 font-sans font-medium uppercase text-xs">
+          <a href="#" class="hover:underline underline-offset-4 decoration-2">Generator</a>
+          <a href="#" class="hover:underline underline-offset-4 decoration-2">Saved Outfits</a>
+          <img src="user.svg" class="w-7 h-7" />
+        </nav>
+      </header>
+    </div>
+      
+      <section class="py-20">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="text-9xl font-serif text-center mb-12">
+          outfit roulette
+          </h1>
+          <div class="flex items-center justify-between gap-8">
+            <p class="max-w-[380px] font-sans text-base">
+              Mix and match clothes, explore different vibes and generate endless outfit combinations.
+            </p>
+            <button class="border border-burgundy border-2 px-6 py-2 font-sans font-semibold text-base hover:bg-burgundy hover:text-blush transition">
+              Generate an Outfit
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section 
   </body>
 </html>
