@@ -42,50 +42,60 @@
     <main class="h-[calc(100vh-56px)] flex flex-col py-20 px-6">
         <h1 class="text-6xl font-serif text-center mb-12">let's create an outfit</h1>
         <p class="text-center font-sans font-medium text-base mb-4">What's the vibe?</p>
-        <div class="flex gap-3 mb-14 flex-wrap justify-center">
-            <button onclick="setVibe('all')" it="vibe-all"
-                class="vibe-btn active-vibe w-[110px] py-2 rounded-full border border-cherry font-sans font-medium text-sm hover:bg-cherry/50 hover:text-blush transition">All</button>
-            <button onclick="setVibe('casual')" id="vibe-casual"
-                class="vibe-btn w-[110px] py-2 rounded-full border border-cherry font-sans font-medium text-sm hover:bg-cherry/50">Casual</button>
-            <button onclick="setVibe('work')" id="vibe-work"
-                class="vibe-btn w-[110px] py-2 rounded-full border border-cherry font-sans font-medium text-sm hover:bg-cherry/50">Work</button>
-            <button onclick="setVibe('sporty')" id="vibe-sporty"
-                class="vibe-btn w-[110px] py-2 rounded-full border border-cherry font-sans font-medium text-sm hover:bg-cherry/50">Sporty</button>
-            <button onclick="setVibe('goingout')" id="vibe-goingout"
-                class="vibe-btn w-[110px] py-2 rounded-full border border-cherry font-sans font-medium text-sm hover:bg-cherry/50">Going Out</button>
+        <div class="flex gap-4 mb-12 flex-wrap justify-center">
+          <button onclick="setVibe('all')" id="vibe-all"
+            class="vibe-btn active-vibe w-[110px] py-2 rounded-full border border-cherry font-sans font-medium text-sm transition">
+            All
+          </button>
+          <button onclick="setVibe('casual')" id="vibe-casual"
+            class="vibe-btn w-[110px] py-2 rounded-full border border-cherry font-sans font-medium text-sm transition">
+            Casual
+          </button>
+          <button onclick="setVibe('work')" id="vibe-work"
+            class="vibe-btn w-[110px] py-2 rounded-full border border-cherry font-sans font-medium text-sm transition">
+            Work
+          </button>
+          <button onclick="setVibe('sporty')" id="vibe-sporty"
+            class="vibe-btn w-[110px] py-2 rounded-full border border-cherry font-sans font-medium text-sm transition">
+            Sporty
+          </button>
+          <button onclick="setVibe('goingout')" id="vibe-goingout"
+            class="vibe-btn w-[110px] py-2 rounded-full border border-cherry font-sans font-medium text-sm transition">
+            Going Out
+          </button>
         </div>
 
         <div class="flex gap-4 mb-12 flex-wrap justify-center">
-            <div class="flex flex-col items-center gap-2">
-                <div id="card-top" class="w-40 h-48 bg-smoke rounded-2xl flex items-center justify-center">
-                <span class="text-6xl text-cherry font-serif">?</span>
-                </div>
-                <p class="font-sans text-sm">Top</p>
+          <div class="flex flex-col items-center gap-2">
+            <div id="card-top" class="w-40 h-48 bg-smoke rounded-2xl flex items-center justify-center">
+              <span class="text-6xl text-cherry font-serif">?</span>
             </div>
-            <div class="flex flex-col items-center gap-2">
-                <div id="card-bottom" class="w-40 h-48 bg-smoke rounded-2xl flex items-center justify-center">
-                <span class="text-6xl text-cherry font-serif">?</span>
-                </div>
-                <p class="font-sans text-sm">Bottom</p>
+            <p class="font-sans text-sm">Top</p>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <div id="card-bottom" class="w-40 h-48 bg-smoke rounded-2xl flex items-center justify-center">
+              <span class="text-6xl text-cherry font-serif">?</span>
             </div>
-            <div class="flex flex-col items-center gap-2">
-                <div id="card-outer" class="w-40 h-48 bg-smoke rounded-2xl flex items-center justify-center">
-                <span class="text-6xl text-cherry font-serif">?</span>
-                </div>
-                <p class="font-sans text-sm">Outerwear</p>
+            <p class="font-sans text-sm">Bottom</p>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <div id="card-outer" class="w-40 h-48 bg-smoke rounded-2xl flex items-center justify-center">
+              <span class="text-6xl text-cherry font-serif">?</span>
             </div>
-            <div class="flex flex-col items-center gap-2">
-                <div id="card-shoes" class="w-40 h-48 bg-smoke rounded-2xl flex items-center justify-center">
-                <span class="text-6xl text-cherry font-serif">?</span>
-                </div>
-                <p class="font-sans text-sm">Shoes</p>
+            <p class="font-sans text-sm">Outerwear</p>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <div id="card-shoes" class="w-40 h-48 bg-smoke rounded-2xl flex items-center justify-center">
+              <span class="text-6xl text-cherry font-serif">?</span>
             </div>
-            <div class="flex flex-col items-center gap-2">
-                <div id="card-bag" class="w-40 h-48 bg-smoke rounded-2xl flex items-center justify-center">
-                <span class="text-6xl text-cherry font-serif">?</span>
-                </div>
-                <p class="font-sans text-sm">Bag</p>
+            <p class="font-sans text-sm">Shoes</p>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <div id="card-bag" class="w-40 h-48 bg-smoke rounded-2xl flex items-center justify-center">
+              <span class="text-6xl text-cherry font-serif">?</span>
             </div>
+            <p class="font-sans text-sm">Bag</p>
+          </div>
         </div>
 
         <div class="flex items-center justify-center gap-4">

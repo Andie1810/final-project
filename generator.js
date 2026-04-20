@@ -42,8 +42,12 @@ let isSaved = false;
 
 function setVibe(vibe) {
   currentVibe = vibe;
-  document.querySelectorAll('.vibe-btn').forEach(btn => btn.classList.remove('active-vibe'));
-  document.getElementById('vibe-' + vibe).classList.add('active-vibe');
+  document.querySelectorAll('.vibe-btn').forEach(btn => {
+    btn.classList.remove('active-vibe');
+  });
+
+  const activeBtn = document.getElementById('vibe-' + vibe);
+  activeBtn.classList.add('active-vibe');
 }
 
 function pick(arr) {
@@ -53,9 +57,11 @@ function pick(arr) {
 function setCard(cardId, category, number) {
   const card = document.getElementById(cardId);
   if (number === null) {
-    card.innerHTML = `<span class="font-sans text-xs" style="color: #7a1f3d">No outerwear</span>`;
+    card.innerHTML = `<span class="font-serif text-sm" style="color: #7a1f3d">No outerwear</span>`;
   } else {
-    card.innerHTML = `<img src="images/${category}${number}.png" alt="${category} ${number}" class="w-full h-full object-cover rounded-2xl" />`;
+    card.innerHTML = `<img src="images/${category}${number}.png"
+    alt="${category} ${number}"
+    class="w-[140px] h-[140px object-cover" />`;
   }
 }
 
@@ -72,8 +78,8 @@ function generateOutfit() {
   isSaved = false;
 
   setCard('card-top',    'top',       top);
-  setCard('card-bottom', 'bottom',    bottom);
-  setCard('card-outer',  'outerwear', outer);
+  setCard('card-bottom', 'bottoms',    bottom);
+  setCard('card-outer',  'outer', outer);
   setCard('card-shoes',  'shoes',     shoes);
   setCard('card-bag',    'bag',       bag);
 
@@ -93,3 +99,7 @@ function saveOutfit() {
   document.getElementById('save-btn').querySelector('img').src = 'filled-heart.svg';
   isSaved = true;
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+  setVibe('all');
+});

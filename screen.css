@@ -1,1 +1,13 @@
 /* Add screen styles below */
+.vibe-btn {
+    transition: all 0.2s ease;
+}
+
+.vibe-btn.active-vibe {
+    background-color: #9F2042;
+    color: #F8E5EE;
+}
+
+.vibe-btn:not(.active-vibe):hover {
+    background-color: rgba(159, 32, 66, 0.5);
+}
