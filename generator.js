@@ -43,11 +43,9 @@ let isSaved = false;
 function setVibe(vibe) {
   currentVibe = vibe;
   document.querySelectorAll('.vibe-btn').forEach(btn => {
-    btn.classList.remove('active-vibe');
+    btn.removeAttribute('data-active');
   });
-
-  const activeBtn = document.getElementById('vibe-' + vibe);
-  activeBtn.classList.add('active-vibe');
+  document.getElementById('vibe-' + vibe).setAttribute('data-active', 'true'); // ✦ changed
 }
 
 function pick(arr) {
@@ -57,17 +55,16 @@ function pick(arr) {
 function setCard(cardId, category, number) {
   const card = document.getElementById(cardId);
   if (number === null) {
-    card.innerHTML = `<span class="font-serif text-sm" style="color: #7a1f3d">No outerwear</span>`;
+    card.innerHTML = `<span class="font-serif text-sm" style="color: #7a1f3d">no<br>outerwear</span>`;
   } else {
     card.innerHTML = `<img src="images/${category}${number}.png"
-    alt="${category} ${number}"
-    class="w-[140px] h-[140px object-cover" />`;
+      alt="${category} ${number}"
+      class="w-full h-full object-contain" />`;
   }
 }
 
 function generateOutfit() {
   const v = currentVibe;
-
   const top    = pick(wardrobe.top[v]);
   const bottom = pick(wardrobe.bottom[v]);
   const outer  = pick(wardrobe.outer[v]);
@@ -85,17 +82,14 @@ function generateOutfit() {
 
   document.getElementById('generate-btn').textContent = 'Try Again';
   document.getElementById('save-btn').classList.remove('hidden');
-
   document.getElementById('save-btn').querySelector('img').src = 'heart.svg';
 }
 
 function saveOutfit() {
   if (!currentOutfit || isSaved) return;
-
   const saved = JSON.parse(localStorage.getItem('savedOutfits') || '[]');
   saved.push({ ...currentOutfit, id: Date.now() });
   localStorage.setItem('savedOutfits', JSON.stringify(saved));
-
   document.getElementById('save-btn').querySelector('img').src = 'filled-heart.svg';
   isSaved = true;
 }
