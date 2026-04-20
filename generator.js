@@ -55,7 +55,7 @@ function setCard(cardId, category, number) {
   if (number === null) {
     card.innerHTML = `<span class="font-sans text-xs" style="color: #7a1f3d">No outerwear</span>`;
   } else {
-    card.innerHTML = `<img src="${category}${number}.jpg" alt="${category} ${number}" class="w-full h-full object-cover rounded-2xl" />`;
+    card.innerHTML = `<img src="images/${category}${number}.png" alt="${category} ${number}" class="w-full h-full object-cover rounded-2xl" />`;
   }
 }
 
@@ -77,11 +77,9 @@ function generateOutfit() {
   setCard('card-shoes',  'shoes',     shoes);
   setCard('card-bag',    'bag',       bag);
 
-  // swap button to "Try Again" and show heart
   document.getElementById('generate-btn').textContent = 'Try Again';
   document.getElementById('save-btn').classList.remove('hidden');
 
-  // reset heart to unfilled on new generation
   document.getElementById('save-btn').querySelector('img').src = 'heart.svg';
 }
 
@@ -92,7 +90,6 @@ function saveOutfit() {
   saved.push({ ...currentOutfit, id: Date.now() });
   localStorage.setItem('savedOutfits', JSON.stringify(saved));
 
-  // swap to filled heart and stay filled
   document.getElementById('save-btn').querySelector('img').src = 'filled-heart.svg';
   isSaved = true;
 }
