@@ -28,17 +28,19 @@
   </head>
   
   <body class="bg-blush text-burgundy flex flex-col">
-    <header class="max-w-6xl mx-auto flex justify-between items-center w-full bg-blush py-4">
-      <div class="border border-burgundy px-6 py-1 rounded-full font-serif text-base">
-        <a href="index.html">outfit roulette</a>
+    <header class="sticky top-0 left-0 w-full bg-blush">
+      <div class="max-w-6xl mx-auto flex justify-between items-center py-4">
+        <div class="border border-burgundy px-6 py-1 rounded-full font-serif text-base">
+          <a href="index.html">outfit roulette</a>
+        </div>
+        <nav class="flex items-center gap-10 font-sans font-medium uppercase text-sm">
+          <a href="generator.html" class="hover:underline underline-offset-4 decoration-2">Generator</a>
+          <a href="saved.html" class="hover:underline underline-offset-4 decoration-2">Saved Outfits</a>
+          <a href="#">
+            <img src="user.svg" alt="User" class="w-7 h-7"/>
+          </a>
+        </nav>
       </div>
-      <nav class="flex items-center gap-10 font-sans font-medium uppercase text-sm">
-        <a href="generator.html" class="hover:underline underline-offset-4 decoration-2">Generator</a>
-        <a href="saved.html" class="hover:underline underline-offset-4 decoration-2">Saved Outfits</a>
-        <a href="#">
-          <img src="user.svg" alt="User" class="w-7 h-7"/>
-        </a>
-      </nav>
     </header>
     
     <main class="h-[calc(100vh-56px)] flex flex-col">

@@ -1,5 +1,5 @@
 const wardrobe = {
-  top: {
+    top: {
     all:      [1,2,3,4,5,6,7,8,9,10,11,12],
     casual:   [1,2,4],
     work:     [10,11,12],
